@@ -39,38 +39,22 @@ var randallsLibrary = (function() {
 
 return {
 	
-	getChangeTitleCase:   function (string) {
-		output(string + ", is now, " + toChangeTitleCase(string));
-	},
-
-	getCheckEmail:  function (testEmail) {
-   		output("Is the email address " + testEmail + " valid? " + toValidateEmail (testEmail));
-   	},
-
-   	getReplaceCharacter: function (string,oldChar,newChar) {
-		output(string + ", is now, " + toReplaceCharacter (string,oldChar,newChar));
-	},
-
-	getCheckPhoneNumber: function (testNumber) {
-		output("Is the phone number " + testNumber + " is a phone number? " + toValidatePhoneNumber (testNumber));
-	},
-
-	getFixedDecimal: function (number) {
-		output(number + ", is now, " + toFixDecimal(number));
-	},
-
-	getParseNumber:	function (value) {
-		output(value + ", is now, " + toParseNumber(value));
-	}
-
+		"toChangeTitleCase":     	toChangeTitleCase,
+		"toValidateEmail":       	toValidateEmail,
+		"toReplaceCharacter": 	 	toReplaceCharacter,
+		"toValidatePhoneNumber": 	toValidatePhoneNumber,
+		"toFixDecimal":          	toFixDecimal,
+		"toParseNumber":         	toParseNumber
 
 };
 
-})();
+});
 
-randallsLibrary.getChangeTitleCase("I hope to learn more coding soon!");
-randallsLibrary.getCheckEmail("aaa@bbb.ccc");
-randallsLibrary.getReplaceCharacter("fff@ggg@hhh@jjj@kkk@lll","@",",");
-randallsLibrary.getCheckPhoneNumber("205-505-9862");
-randallsLibrary.getFixedDecimal(7);
-randallsLibrary.getParseNumber("There are 65 diapers in a pack");
+var newLib = new randallsLibrary();
+
+console.log(newLib.toChangeTitleCase("I am happy this class is over."));
+console.log(newLib.toValidateEmail("aaa@bbb.ccc"));
+console.log(newLib.toReplaceCharacter("fff@ggg@hhh@jjj@kkk@lll","@",","));
+console.log(newLib.toValidatePhoneNumber("205-505-9862"));
+console.log(newLib.toFixDecimal(7));
+console.log(newLib.toParseNumber("65 diapers are in a pack"));
