@@ -26,6 +26,13 @@ var randallsLibrary = (function() {
 		return (regexObj.test.(testNumber));
 	};
 
+	var toFixDecimal = function (number) {
+		var newNumber;
+		return (newNumber = number.toFixed(4));
+	};
+
+	
+
 
 
 
