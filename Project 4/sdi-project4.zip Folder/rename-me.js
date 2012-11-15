@@ -21,9 +21,9 @@ var randallsLibrary = (function() {
 		return (myString.replace(old, newChar));
 	};
 
-	var toValidatePhoneNumber = function (testNumber) {
+	var toValidatePhoneNumber 	= function (testNumber) {
 		var regexObj = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-		return (regexObj.test.(testNumber));
+		return (regexObj.test(testNumber));
 	};
 
 	var toFixDecimal = function (number) {
@@ -47,8 +47,8 @@ return {
    		output("Is the email address " + testEmail + " valid? " + toValidateEmail (testEmail));
    	},
 
-   	getReplaceChar: function (string,oldChar,newChar) {
-		output(string + ", is now, " + toReplaceChar (string,oldChar,newChar));
+   	getReplaceCharacter: function (string,oldChar,newChar) {
+		output(string + ", is now, " + toReplaceCharacter (string,oldChar,newChar));
 	},
 
 	getCheckPhoneNumber: function (testNumber) {
@@ -61,14 +61,16 @@ return {
 
 	getParseNumber:	function (value) {
 		output(value + ", is now, " + toParseNumber(value));
-	},
+	}
 
 
 };
 
+})();
 
-
-
-
-
-};
+randallsLibrary.getChangeTitleCase("I hope to learn more coding soon!");
+randallsLibrary.getCheckEmail("aaa@bbb.ccc");
+randallsLibrary.getReplaceCharacter("fff@ggg@hhh@jjj@kkk@lll","@",",");
+randallsLibrary.getCheckPhoneNumber("205-505-9862");
+randallsLibrary.getFixedDecimal(7);
+randallsLibrary.getParseNumber("There are 65 diapers in a pack");
