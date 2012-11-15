@@ -37,6 +37,37 @@ var randallsLibrary = (function() {
 	};
 
 
+return {
+	
+	getChangeTitleCase:   function (string) {
+		output(string + ", is now, " + toChangeTitleCase(string));
+	},
+
+	getCheckEmail:  function (testEmail) {
+   		output("Is the email address " + testEmail + " valid? " + toValidateEmail (testEmail));
+   	},
+
+   	getReplaceChar: function (string,oldChar,newChar) {
+		output(string + ", is now, " + toReplaceChar (string,oldChar,newChar));
+	},
+
+	getCheckPhoneNumber: function (testNumber) {
+		output("Is the phone number " + testNumber + " is a phone number? " + toValidatePhoneNumber (testNumber));
+	},
+
+	getFixedDecimal: function (number) {
+		output(number + ", is now, " + toFixDecimal(number));
+	},
+
+	getParseNumber:	function (value) {
+		output(value + ", is now, " + toParseNumber(value));
+	},
+
+
+};
+
+
+
 
 
 
