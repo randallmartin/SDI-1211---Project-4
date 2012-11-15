@@ -31,7 +31,10 @@ var randallsLibrary = (function() {
 		return (newNumber = number.toFixed(4));
 	};
 
-	
+	var toParseNumber = function (value) {
+		var value = parseInt(value);
+		return value;
+	};
 
 
 
