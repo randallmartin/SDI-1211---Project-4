@@ -21,6 +21,11 @@ var randallsLibrary = (function() {
 		return (myString.replace(old, newChar));
 	};
 
+	var toValidatePhoneNumber = function (testNumber) {
+		var regexObj = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+		return (regexObj.test.(testNumber));
+	};
+
 
 
 
